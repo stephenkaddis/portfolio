@@ -1,0 +1,436 @@
+/* Global Styles */
+/* Apply modern font, improve readability, and set consistent box-sizing */
+* {
+    font-family: 'Open Sans', sans-serif; /* Modern, web-friendly font */
+    letter-spacing: 1px;
+    line-height: 1.5; /* Improved readability */
+    margin: 0; /* Consistent margin */
+    padding: 0; /* Consistent padding */
+    box-sizing: border-box; /* Useful for responsiveness */
+}
+
+/* Header Background */
+/* Styles for the header section */
+.headerbackground {
+    background: rgb(200, 229, 255); /* Light blue background color */
+    background-size: cover; /* Cover background */
+    min-height: 300px; /* Minimum height of 300px */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Align items at either end */
+    align-content: flex-start; /* Align content at the start */
+}
+    
+/* Profile Picture */
+/* Styles for the circular profile picture */
+.mypicture {
+    padding: 75px; /* Add padding */
+    position: absolute; /* Position absolute for precise placement */
+    background-image: url(./1608678440395.jpeg); /* Set image as background */
+    background-size: cover; /* Cover background */
+    background-repeat: no-repeat; /* No repeat of the background image */
+    width: 10px; /* Set width of the image */
+    height: 10px; /* Set height of the image */
+    border-radius: 50%; /* Circular image */
+    left: 70%; /* Position image 70% from the left */
+    top:17%; /* Position image 30% from the top */
+}
+
+/* Title Text */
+/* Styles for the title text in the header */
+.titletext {
+    line-height: 50px; /* Line height for title text */
+    padding-left: 5%; /* Padding to the left */
+    padding-top: 5%; /* Padding to the top */
+}
+
+/* Navbar */
+/* Styles for the navigation bar */
+.navbar {
+    min-height: 100%; /* Set minimum height */
+    padding-right: 5%; /* Padding to the right */
+    padding-top: 2%; /* Padding to the top */
+}
+
+/* Links */
+/* Styling for links in the navigation bar */
+a {
+    position: relative;
+    display: block;
+    padding: 20px 40px; /* Padding for links */
+    text-transform: uppercase; /* Uppercase text for links */
+    text-decoration: none; /* No underline */
+    color: rgb(0, 0, 0); /* Black text color */
+    font-size: 20px; /* Font size for links */
+    letter-spacing: 2px; /* Letter spacing */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Link hover effect */
+a:before {
+    content: ''; /* Empty content */
+    position: absolute;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    top: 0; /* Positioned at top */
+    left: -100%; /* Positioned left */
+    background: rgb(0, 0, 0); /* Black background */
+    transition: 0.5s; /* Transition effect */
+    transition-delay: 0.1s; /* Delay transition */
+}
+
+/* Link hover effect */
+a:hover:before {
+    left: 100%; /* Shift background to the right on hover */
+}
+
+/* Link span styles */
+/* Styling for spans in links */
+a span:nth-child(odd) {
+    position: absolute;
+    display: block;
+    width: 100%; /* Full width */
+    height: 2px; /* Height of 2px */
+    background: rgb(0, 0, 0); /* Black background */
+    transition: 0.5s ease-in-out; /* Transition effect */
+}
+
+/* Positioning of first child span in link */
+a span:nth-child(1) {
+    top: 0; /* Positioned at top */
+    left: 50%; /* Positioned in the middle */
+}
+
+/* Positioning of third child span in link */
+a span:nth-child(3) {
+    bottom: 0; /* Positioned at the bottom */
+    right: 50%; /* Positioned in the middle */
+}
+
+/* Hover effect on first child span */
+a:hover span:nth-child(1) {
+    top: 0; /* Top position unchanged */
+    left: -50%; /* Shift left */
+}
+
+/* Hover effect on third child span */
+a:hover span:nth-child(3) {
+    bottom: 0; /* Bottom position unchanged */
+    right: -50%; /* Shift right */
+}
+
+/* Styling for even child spans in links */
+a span:nth-child(even) {
+    position: absolute;
+    display: block;
+    width: 2px; /* Width of 2px */
+    height: 100%; /* Full height */
+    background: rgb(0, 0, 0); /* Black background */
+    transition: 0.5s ease-in-out; /* Transition effect */
+}
+
+/* Positioning of second child span in link */
+a span:nth-child(2) {
+    top: 50%; /* Positioned in the middle */
+    left: 0; /* Left position unchanged */
+}
+
+/* Positioning of fourth child span in link */
+a span:nth-child(4) {
+    bottom: 50%; /* Positioned in the middle */
+    right: 0; /* Right position unchanged */
+}
+
+/* Hover effect on second child span */
+a:hover span:nth-child(2) {
+    top: -50%; /* Shift up */
+    left: 0; /* Left position unchanged */
+}
+
+/* Hover effect on fourth child span */
+a:hover span:nth-child(4) {
+    bottom: -50%; /* Shift down */
+    right: 0; /* Right position unchanged */
+}
+
+/* About Me Container */
+/* Styling for the about me container section */
+.aboutmecontainer {
+    min-height: 300px; /* Minimum height */
+    text-align: center; /* Center text */
+    padding: 0% 20% 0% 20%;
+}
+
+/* About Me Container Heading */
+/* Styling for the heading in the about me container */
+.aboutmecontainer h2 {
+    padding-top: 12%; /* Padding at the top */
+}
+
+/* Skills Container */
+/* Styling for the skills container */
+.skillscontainer {
+    display: grid; /* Use grid layout */
+    grid-template-areas:
+        "skills x x"
+        "sales marketing leadership"
+        "eCommerce fullStackEngineering espresso"; /* Define grid areas */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    justify-items: stretch; /* Stretch items */
+    gap: 15px; /* Gap between items */
+    width: 80%; /* Width of 80% */
+    margin: auto; /* Center the container */
+}
+
+/* Skills Container Heading */
+/* Styling for the heading in the skills container */
+.skillscontainer h2 {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center heading */
+    color: rgb(0, 0, 0); /* Black text color */
+    grid-column: 2 / span 1; /* Position heading */
+}
+
+/* Skills Container Div Styling */
+/* Styling for each child div in the skills container */
+.skillscontainer > div {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+/* Skill Section Styles */
+/* Styling for each skill section: sales, marketing, leadership, e-commerce, full stack, and espresso */
+.sales,
+.marketing,
+.leadership,
+.ecommerce,
+.fullstack,
+.espresso {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content */
+    background-color: rgb(200, 229, 255); /* Light blue background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 2px 1px rgba(77, 77, 77, 0.553); /* Light shadow */
+    padding: 20px 0; /* Padding for content */
+}
+
+/* Grid position for each skill section */
+/* Define grid position for each skill section */
+.sales {
+    grid-column: 1 / span 1; /* Grid column position */
+    grid-row: 2 / span 1; /* Grid row position */
+}
+
+.marketing {
+    grid-column: 2 / span 1; /* Grid column position */
+    grid-row: 2 / span 1; /* Grid row position */
+}
+
+.leadership {
+    grid-column: 3 / span 1; /* Grid column position */
+    grid-row: 2 / span 1; /* Grid row position */
+}
+
+.ecommerce {
+    grid-column: 1 / span 1; /* Grid column position */
+    grid-row: 3 / span 1; /* Grid row position */
+}
+
+.fullstack {
+    grid-column: 2 / span 1; /* Grid column position */
+    grid-row: 3 / span 1; /* Grid row position */
+}
+
+.espresso {
+    grid-column: 3 / span 1; /* Grid column position */
+    grid-row: 3 / span 1; /* Grid row position */
+}
+/* ===================================Experience Section ===================================*/
+/* =====================Styling the overall experience section container ===================================*/
+
+
+.experience {
+    margin-top:50px;
+    padding: 0px 5% 10% 5%; /* Add padding to the section */
+    background-color: rgb(222, 239, 255); /* Light blue background */
+    border-top: 2px solid #ccc; /* Top border */
+    display:grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(4 , 1fr);
+    gap:100px;
+}
+.experience h2 {
+    grid-column: 2 / span 1;
+    align-self:end;
+    justify-self: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.chromatic {
+    grid-column:1 /span 3;
+    grid-row: 2 /span 1;
+    display:grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items:center;
+    gap:10px;
+}
+
+.chromatic img {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    width:35px;
+    height:35px;
+    align-self: end;
+}
+
+.chromatic h3 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    align-self:start;
+}
+
+.chromatic .timeline {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    align-self:end;
+}
+.chromatic .title {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    align-self:start;
+}
+.chromatic ul {
+    grid-column: 3 / span 8;
+    grid-row: 1 / span 2;
+}
+
+
+.spatialcinematics {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 1;
+    display:grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items:center;
+    gap:10px;
+}
+
+.spatialcinematics img {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    width: 60px;
+    height: 60px;
+    align-self: end;
+}
+
+.spatialcinematics h3 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    align-self: start;
+    justify-self:center;
+}
+
+.spatialcinematics .timeline {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    align-self: end;
+}
+
+.spatialcinematics .title {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    align-self: start;
+    justify-self:center;
+}
+
+.spatialcinematics ul {
+    grid-column: 3 / span 8;
+    grid-row: 1 / span 2;
+}
+
+.sneakerset {
+    grid-column: 1 / span 3;
+    grid-row: 4 / span 1;
+    display:grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items:center;
+    gap:10px;
+    wrap:nowrap;
+}
+
+.sneakerset img {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    width: 45px;
+    height: 45px;
+    align-self: end;
+}
+
+.sneakerset h3 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    align-self: start;
+}
+
+.sneakerset .timeline {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    align-self: end;
+}
+
+.sneakerset .title {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    align-self: start;
+}
+
+.sneakerset ul {
+    grid-column: 3 / span 8;
+    grid-row: 1 / span 2;
+}
+
+
+/* ===================================Footer Section ===================================*/
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 20px 5%; /* Padding */
+    text-align: center; /* Center text */
+}
+
+/* Styling for the contact information list */
+.footer .contact.information {
+    list-style: none; /* No bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    margin-bottom: 10px; /* Margin below list */
+}
+
+/* Style each list item in the contact information */
+.footer .contact.information il {
+    margin-bottom: 5px; /* Margin below each list item */
+}
+
+
+.footer button {
+    background-color: rgb(200, 229, 255); /* Blue background color */
+    color: rgb(0, 0, 0); /* White text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease-in-out; /* Transition effect */
+}
+
+/* Hover effect for the resume download button */
+.footer .resumedownload button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
